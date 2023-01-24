@@ -22,12 +22,11 @@ public class AddSkillPage : CommonDriver
         // Identify Add skill textbox and enter valid input
         IWebElement AddskillTextbox = driver.FindElement(By.Name("name"));
         AddskillTextbox.SendKeys(Skills);
-     
-     
+
+        // Choose beginner level from dropdown
         SelectElement SkilllevelDropdown = new SelectElement(driver.FindElement(By.Name("level")));
         SkilllevelDropdown.SelectByValue(SkillLevel);
 
-        // Choose beginner level from dropdown
        
         // Identify Add button and click
         wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]")));
