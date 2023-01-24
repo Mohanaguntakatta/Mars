@@ -34,7 +34,10 @@ public class AddCertification : CommonDriver
         wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]")));
         IWebElement CertificationAddButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]"));
         CertificationAddButton.Click();
-
+        // Identify Certification button and click
+        wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]")));
+        IWebElement CertificationButton1 = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+        CertificationButton1.Click();
         // Check if user is able to add certifications succesfully 
     }
     public void CheckCertificationAdded(string certificate, string from, string year)
@@ -43,7 +46,7 @@ public class AddCertification : CommonDriver
         bool certificationAdded = false;
         //reading all the columns from the table
         ReadOnlyCollection<IWebElement> elements;
-        wait.Until(ExpectedConditions.ElementIsVisible(By.TagName("td")));
+        wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.TagName("td")));
         elements = driver.FindElements(By.TagName("td"));
         for (int i = 0; i < elements.Count; i++)
         {

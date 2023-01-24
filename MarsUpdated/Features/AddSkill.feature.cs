@@ -130,7 +130,7 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Seller is able to edit Skills details")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        [NUnit.Framework.TestCaseAttribute("Test Analyst", "Expert", null)]
+        [NUnit.Framework.TestCaseAttribute("Java", "Expert", null)]
         public virtual void SellerIsAbleToEditSkillsDetails(string skills, string skillLevel, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -309,7 +309,7 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Seller is able to edit Language deatails")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        [NUnit.Framework.TestCaseAttribute("French", "Basic", null)]
+        [NUnit.Framework.TestCaseAttribute("English", "Fluent", null)]
         public virtual void SellerIsAbleToEditLanguageDeatails(string languages, string level, string[] exampleTags)
         {
             string[] @__tags = new string[] {

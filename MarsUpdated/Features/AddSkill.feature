@@ -21,8 +21,8 @@ Scenario Outline: Add new Skill
 	Then The '<Skills>' and '<SkillLevel>'skill edit should be updated successfully
 
 	Examples: 
-	| Skills       | Skill Level |
-	| Test Analyst | Expert      |
+	| Skills | Skill Level |
+	| Java   | Expert      |
 
 	@ignore
     Scenario:Seller is able to delete Skills details
@@ -51,8 +51,8 @@ Scenario Outline: Add new Skill
 	Then '<language>'and '<level>' should be updated successfully
 
 	Examples: 
-	| Languages | Level |
-	| French    | Basic |
+	| Languages | Level  |
+	| English   | Fluent |
 
     @ignore
     Scenario: Seller is able to delete Language deatails
