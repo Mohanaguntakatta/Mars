@@ -1,6 +1,9 @@
-﻿Feature: AddSkill
+﻿Feature: Profile
 
-Adding a user skill for the profile
+As a seller
+I want the feature to add my profile
+So that 
+Seller's are able to see the details on the Profile page
 
 Background: Logging in to portal
     Given The user is logged in to portal
