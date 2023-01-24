@@ -20,22 +20,23 @@ namespace Mars.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("AddSkill")]
-    public partial class AddSkillFeature
+    [NUnit.Framework.DescriptionAttribute("Profile")]
+    public partial class ProfileFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "AddSkill.feature"
+#line 1 "Profile.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "AddSkill", "Adding a user skill for the profile", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Profile", "As a seller\r\nI want the feature to add my profile\r\nSo that \r\nSeller\'s are able to" +
+                    " see the details on the Profile page", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,9 +76,9 @@ namespace Mars.Features
         
         public virtual void FeatureBackground()
         {
-#line 5
+#line 8
 #line hidden
-#line 6
+#line 9
     testRunner.Given("The user is logged in to portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -94,7 +95,7 @@ namespace Mars.Features
             argumentsOfScenario.Add("Skill", skill);
             argumentsOfScenario.Add("SkillLevel", skillLevel);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add new Skill", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -114,13 +115,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 9
+#line 12
     testRunner.When(string.Format("User adds a \'{0}\' and a \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 13
     testRunner.Then(string.Format("\'{0}\' and \'{1}\' should be added successfully", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -144,7 +145,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Skills", skills);
             argumentsOfScenario.Add("Skill Level", skillLevel);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to edit Skills details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 19
+#line 22
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -164,13 +165,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 20
+#line 23
  testRunner.Given(string.Format("Edit existing \'{0}\' and \'<SkillLevel>\' on profile", skills), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 21
+#line 24
  testRunner.Then(string.Format("The \'{0}\' and \'<SkillLevel>\'skill edit should be updated successfully", skills), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -186,7 +187,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to delete Skills details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 28
+#line 31
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -206,13 +207,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 29
+#line 32
  testRunner.Given("Delete existing Skills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 30
+#line 33
  testRunner.Then("Skills should be deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -228,7 +229,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify validation error for Skills tab", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 33
+#line 36
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -248,13 +249,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 34
+#line 37
  testRunner.Given("Left Skills field as blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 35
+#line 38
  testRunner.Then("Error message should be displayed for skills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -273,7 +274,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Language", language);
             argumentsOfScenario.Add("LanguageLevel", languageLevel);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add new Language", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 38
+#line 41
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -293,13 +294,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 39
+#line 42
     testRunner.When(string.Format("User adds \'{0}\' and a \'{1}\'", language, languageLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 40
+#line 43
     testRunner.Then(string.Format("The \'{0}\' and \'{1}\' should be added successfully", language, languageLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -323,7 +324,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Languages", languages);
             argumentsOfScenario.Add("Level", level);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to edit Language deatails", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 49
+#line 52
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -343,13 +344,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 50
+#line 53
  testRunner.Given("Add new \'<language>\' and \'<level>\' language to the profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 51
+#line 54
  testRunner.Then("\'<language>\'and \'<level>\' should be updated successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -365,7 +366,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to delete Language deatails", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 58
+#line 61
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -385,13 +386,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 59
+#line 62
  testRunner.Given("Delete the existing Language deatails", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 60
+#line 63
  testRunner.Then("Language deatails should be deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -407,7 +408,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify validation error for Language tab", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 63
+#line 66
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -427,13 +428,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 64
+#line 67
  testRunner.Given("Left Language Field blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 65
+#line 68
  testRunner.Then("Error message should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -452,7 +453,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("From", from);
             argumentsOfScenario.Add("Year", year);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add new Certification", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 67
+#line 70
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -472,13 +473,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 68
+#line 71
     testRunner.When(string.Format("User adds a \'{0}\', \'{1}\' and a \'{2}\'", certificate, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 69
+#line 72
     testRunner.Then(string.Format("\'{0}\', \'{1}\' and a \'{2}\' should be added successfully", certificate, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -503,7 +504,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("CertificateFrom", certificateFrom);
             argumentsOfScenario.Add("Year", year);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("seller is able to edit the Certifications details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 77
+#line 80
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -523,13 +524,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 78
+#line 81
  testRunner.Given(string.Format("Edit existing \'{0}\',\'{1}\' and \'{2}\' to profile", certifications, certificateFrom, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 79
+#line 82
  testRunner.Then(string.Format("\'{0}\',\'{1}\' and \'{2}\' details should be added successfully", certifications, certificateFrom, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -545,7 +546,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to delete Certifications details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 86
+#line 89
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -565,13 +566,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 87
+#line 90
  testRunner.Given("Delete Certifications details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 88
+#line 91
  testRunner.Then("Certifications details should be deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -587,7 +588,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify validation error for Certifications tab", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 91
+#line 94
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -607,13 +608,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 92
+#line 95
  testRunner.Given("Left Certifications field as blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 93
+#line 96
  testRunner.Then("Following error message should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -629,7 +630,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to add description on profile", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 96
+#line 99
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -649,14 +650,14 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 97
+#line 100
  testRunner.Given("I provide the description as \"My name is Mohana,i would love to work in IT field." +
                         "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 98
+#line 101
  testRunner.Then("The description details should be added successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -672,7 +673,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to edit description on the Profile", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 101
+#line 104
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -692,14 +693,14 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 102
+#line 105
  testRunner.Given("Edit the description as \"Hi, i would love to listen music and do dancing during f" +
                         "ree times.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 103
+#line 106
  testRunner.Then("The description details should be added successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -715,7 +716,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is unable to save when the description is empty on the Profile", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 106
+#line 109
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -735,13 +736,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 107
+#line 110
  testRunner.Given("Delete the description and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 108
+#line 111
  testRunner.Then("Error message (Please, a description is required) should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -766,7 +767,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Description", description);
             argumentsOfScenario.Add("Popup Error message", popupErrorMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify validation error for Description field", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 111
+#line 114
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -786,13 +787,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 112
+#line 115
  testRunner.Given("Enter special characters or leave the Description box blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 113
+#line 116
  testRunner.Then("Following error messages should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -817,7 +818,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Hours", hours);
             argumentsOfScenario.Add("Earn Target", earnTarget);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to add the Availability on profile", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 121
+#line 124
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -837,13 +838,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 122
+#line 125
  testRunner.Given(string.Format("Add \'{0}\',\'{1}\' and \'{2}\' to profile details", availability, hours, earnTarget), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 123
+#line 126
  testRunner.Then(string.Format("\'{0}\',\'{1}\' and \'{2}\' should be added successfully", availability, hours, earnTarget), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -868,7 +869,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Hours", hours);
             argumentsOfScenario.Add("Earn Target", earnTarget);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to edit the Availability on profile", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 130
+#line 133
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -888,13 +889,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 131
+#line 134
  testRunner.Given(string.Format("Edit \'{0}\',\'{1}\' and \'{2}\' to profile details", availability, hours, earnTarget), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 132
+#line 135
  testRunner.Then(string.Format("\'{0}\',\'{1}\' and \'{2}\' should be added successfully", availability, hours, earnTarget), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -921,7 +922,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Degree", degree);
             argumentsOfScenario.Add("Graduation Year", graduationYear);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to add Education details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 139
+#line 142
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -941,13 +942,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 140
+#line 143
  testRunner.Given(string.Format("Added new \'{0}\'\'{1}\' \'{2}\' \'{3}\' and \'{4}\" to the profile", country, university, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 141
+#line 144
  testRunner.Then(string.Format("\'{0}\'\'{1}\' \'{2}\' \'{3}\' and \'{4}\" should be added successfully", country, university, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -974,7 +975,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Degree", degree);
             argumentsOfScenario.Add("Graduation", graduation);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to edit Education details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 149
+#line 152
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -994,13 +995,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 150
+#line 153
  testRunner.Given(string.Format("Edit existing \'<Country>\'\'{0}\' \'{1}\' \'{2}\' and \'<Graduation Year>\" on profile", university, title, degree), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 151
+#line 154
  testRunner.Then(string.Format("\'<Country>\'\'{0}\' \'{1}\' \'{2}\' and \'<Graduation Year>\" should be updated successful" +
                             "ly", university, title, degree), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -1017,7 +1018,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to delete Education details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 158
+#line 161
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1037,13 +1038,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 159
+#line 162
  testRunner.Given("Delete existing Skills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 160
+#line 163
  testRunner.Then("Skills should be deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1059,7 +1060,7 @@ this.FeatureBackground();
                     "ignore"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify validation error for Education tab", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 163
+#line 166
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1079,13 +1080,13 @@ this.FeatureBackground();
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 8
 this.FeatureBackground();
 #line hidden
-#line 164
+#line 167
  testRunner.Given("Left Skills field as blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 165
+#line 168
  testRunner.Then("Error message should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
