@@ -3,20 +3,7 @@ namespace MarsUpdated;
 
 public class AddSkillPage : CommonDriver
 {
-    // Wait  inside the constructor
-
-    public WebDriverWait wait;
-    public AddSkillPage()
-    {
-        wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-    }
-
-    // Implemented the POM pattern
-    public IWebElement SkillButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
-    public IWebElement AddnewButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/thead/tr/th[3]/div"));
-    public IWebElement AddskillTextbox => driver.FindElement(By.Name("name"));
-    public IWebElement AddButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]"));
-    public IWebElement SkillButton1 => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
+  
     public void CreateSkills(string Skills, string SkillLevel)
     {
         WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));

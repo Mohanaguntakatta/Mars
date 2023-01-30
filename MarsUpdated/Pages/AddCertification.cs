@@ -6,13 +6,9 @@ namespace Mars;
 
 public class AddCertification : CommonDriver
 {
-    public WebDriverWait wait;
 
-    public AddCertification()
-    {
-         wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-    }
-   public IWebElement CertificationButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+    // Implemented the POM pattern
+    public IWebElement CertificationButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
    public IWebElement CertificationAddNew => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
    public IWebElement CertificateTextbox => driver.FindElement(By.Name("certificationName"));
    public IWebElement CertifiedFromTextbox => driver.FindElement(By.Name("certificationFrom"));
