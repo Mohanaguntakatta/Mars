@@ -5,25 +5,23 @@ namespace Mars;
 
 public class AddLanguage : CommonDriver
 {
-
     // Wait  inside the constructor
 
-    public WebDriverWait wait;
-    public AddLanguage()
-    {
-        wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-    }
+        public WebDriverWait wait;
+        public AddLanguage()
+        {
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+        }
 
 
     // Implemented the POM pattern
-    public IWebElement LanguageButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]"));
-    public IWebElement LanguageAddButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
-    public IWebElement LanguageTextbox => driver.FindElement(By.Name("name"));
-    public IWebElement ClickAddButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
-    public IWebElement LanguageButton1 => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]"));
+        public IWebElement LanguageButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]"));
+        public IWebElement LanguageAddButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
+        public IWebElement LanguageTextbox => driver.FindElement(By.Name("name"));
+        public IWebElement ClickAddButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
+        public IWebElement LanguageButton1 => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]"));
 
-
-    public void CreateLanguage(string Language, string LanguageLevel)
+        public void CreateLanguage(string Language, string LanguageLevel)
     {
         // Identify Language button and click and using explicit waits to locate elements
         wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]")));
