@@ -47,8 +47,7 @@ public class AddSkillPage : CommonDriver
     }
 
     public void CheckSkillAdded(string skill,string skillLevel)
-    {
-       
+    {      
         //boolean value to check if the skill is added for assertion
         bool skillAdded = false;
         //reading all the columns from the table
