@@ -37,6 +37,15 @@ Scenario Outline: Add new Skill
 	Given Left Skills field as blank
 	Then Error message should be displayed for skills
 
+	@ignore
+	Scenario Outline: Negative testing with valid input for add skills
+	Given Add existing '<Skills>' and '<SkillLevel>' on profile
+	Then Error message should be displayed for skills
+
+	Examples: 
+	| Skills | Skill Level | Popup error message                            |
+	| Java   | Expert      | This skill is already exist in your skill list |
+
 
 	Scenario Outline: Add new Language
     When User adds '<Language>' and a '<LanguageLevel>'

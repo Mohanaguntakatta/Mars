@@ -1,29 +1,43 @@
 ﻿
 using MarsUpdated;
+using System.Collections.ObjectModel;
 
 namespace Mars;
 
 public class AddCertification : CommonDriver
 {
-    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+    // Wait  inside the constructor
+
+        public WebDriverWait wait;
+        public AddCertification()
+        {
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+        }
+
+
+    // Implemented the POM pattern
+        public IWebElement CertificationButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+        public IWebElement CertificationAddNew => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
+        public IWebElement CertificateTextbox => driver.FindElement(By.Name("certificationName"));
+        public IWebElement CertifiedFromTextbox => driver.FindElement(By.Name("certificationFrom"));
+        public IWebElement CertificationAddButton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]"));
+        public IWebElement CertificationButton1 => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+
     public void CreateCertification(string Certificate, string From, string Year)
     {
+
         // Identify Certification button and click
         wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]")));
-        IWebElement CertificationButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
         CertificationButton.Click();
 
         // Identify Add new button and click
-        wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div")));
-        IWebElement CertificationAddNew = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
+        wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div")));      
         CertificationAddNew.Click();
 
-        // Identify ceritificate or award textbox and enter valid input
-        IWebElement CertificateTextbox = driver.FindElement(By.Name("certificationName"));
+        // Identify ceritificate or award textbox and enter valid input     
         CertificateTextbox.SendKeys(Certificate);
 
-        // Identify ceritified from textbox and enter valid input
-        IWebElement CertifiedFromTextbox = driver.FindElement(By.Name("certificationFrom"));
+        // Identify ceritified from textbox and enter valid input 
         CertifiedFromTextbox.SendKeys(From);
 
         // Identify year dropdown box
@@ -32,11 +46,11 @@ public class AddCertification : CommonDriver
 
         // Identify add button and click
         wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]")));
-        IWebElement CertificationAddButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]"));
+      
         CertificationAddButton.Click();
         // Identify Certification button and click
         wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]")));
-        IWebElement CertificationButton1 = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+        
         CertificationButton1.Click();
         // Check if user is able to add certifications succesfully 
     }
@@ -61,4 +75,6 @@ public class AddCertification : CommonDriver
         //fluent assertions. True if certification added
         certificationAdded.Should().BeTrue();
     }
+
+
 }
